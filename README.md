@@ -13,3 +13,8 @@ Each tile is paired with a reference segmentation mask depicting the 6 classes w
 ## Best Model Performance Metrics
 ![example](/images/validation-ds-metrics.JPG)
 ## Tile Prediction using Test-Time Augmentation
+- Without test-time augmentation
+![example](/images/tile-pred-no-tsa.JPG)
+
+- With test-time augmentation
+![example](/images/tile-pred-with-tsa.JPG)
