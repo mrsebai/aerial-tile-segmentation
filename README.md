@@ -22,11 +22,15 @@ In addition, we adopted the [learning rate finder](https://arxiv.org/abs/1506.01
 Once the optimum learning rate is found, the training is performed using the [one-cycle policy](https://arxiv.org/abs/1708.07120) training strategy. The curves below depicts the evolution of the learning rate and the SGD momemtum during training.
 ![example](/images/one-cycle-training-policy.JPG)
 
-Naturally, during training, we monitor the performance metrics: Accurancy, IoU and the loss function as shown below. The training is halted thanks to early stopping strategy once the performance metrics stagnates.
+Naturally, during training, we monitor the performance metrics: Accurancy, IoU and the loss function as shown below. The training is halted thanks to [early stopping](https://www.tensorflow.org/api_docs/python/tf/keras/callbacks/EarlyStopping) strategy once the performance metrics stagnates.
 ![example](/images/trainin-metrics.png)
 ## Best Model Performance Metrics
+The model performance measured on the validation dataset is quiet amazing especially on the `Building`, `Road` and `Car` classes (IoU > 0.8). Below is the Confusion Matrix and the Per-class IoU metrics along with some reference visuals for the IoU metric.
 ![example](/images/validation-ds-metrics.JPG)
 ## Tile Prediction using Test-Time Augmentation
+Applying the inference pipeline using new tile of the same size (6000x6000) could be slow if we loop through the tile to extract the patches, make prediction them stitch together the patches to reconstruct the tile. Fortunately we perfrom such inference without any loop thanks to a clever tile reconstruction trick using Tensorflow's [tf.scatter_nd](https://www.tensorflow.org/api_docs/python/tf/scatter_nd). Inference time on tile is reduced from Minutes to seconds. 
+
+In addition, once we performed an inference on a tile, [Test-time augmentation](https://arxiv.org/abs/2011.11156) technique enhances by several points the prediction quality as shown below:
 - Without test-time augmentation
 ![example](/images/tile-pred-no-tsa.JPG)
 
