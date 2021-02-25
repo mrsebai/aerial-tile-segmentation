@@ -7,10 +7,11 @@ Each tile is paired with a reference segmentation mask depicting the 6 classes w
 ## Tile extraction and data augmentation using tf.data input pipeline
 ![example](/images/tile-patching.png)
 ## Tensorflow model architecture
-
+![example](/images/model-arch.JPG)
 ## Model training
 ![example](/images/learning-rate-finder.JPG)
 ![example](/images/one-cycle-training-policy.JPG)
+![example](/images/trainin-metrics.png)
 ## Best Model Performance Metrics
 ![example](/images/validation-ds-metrics.JPG)
 ## Tile Prediction using Test-Time Augmentation
