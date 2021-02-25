@@ -20,3 +20,5 @@ Each tile is paired with a reference segmentation mask depicting the 6 classes w
 
 - With test-time augmentation
 ![example](/images/tile-pred-with-tsa.JPG)
+
+## Jupy
