@@ -5,11 +5,11 @@ Each tile is paired with a reference segmentation mask depicting the 6 classes w
 ![example](/images/isprs-example-tile-mask.JPG)
 
 ## Tile extraction and data augmentation using tf.data input pipeline
-
+![example](/images/tile-patching.png)
 ## Tensorflow model architecture
 
 ## Model training
 
 ## Best Model Performance Metrics
-
+![example](/images/validation-ds-metrics.JPG)
 ## Tile Prediction using Test-Time Augmentation
