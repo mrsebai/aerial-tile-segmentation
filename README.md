@@ -9,7 +9,8 @@ Each tile is paired with a reference segmentation mask depicting the 6 classes w
 ## Tensorflow model architecture
 
 ## Model training
-
+![example](/images/learning-rate-finder.JPG)
+![example](/images/one-cycle-training-policy.JPG)
 ## Best Model Performance Metrics
 ![example](/images/validation-ds-metrics.JPG)
 ## Tile Prediction using Test-Time Augmentation
