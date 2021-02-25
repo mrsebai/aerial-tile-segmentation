@@ -8,6 +8,7 @@ Each tile is paired with a reference segmentation mask depicting the 6 classes w
 Due to the size of the tiles (600x6000 pixels) it is not possible to feed them directly to the Tensorflow model which has image input size limited to 256x256 pixels. Thus it is crucial to build an efficient and flexible input pipeline that read the tile file, extract smaller patches, perform data augmentation techniques while being fast enough to avoid data starvation of the model sitting on the GPU during training phase. Fortunately, Tensorflow's [tf.data](https://www.tensorflow.org/guide/data) allows building of such pipeline. The tile and its corresponding reference mask are processed in parrallel and the produced smaller patches are like shown in the following grid:
 ![example](/images/tile-patching.png)
 ## Tensorflow model architecture
+The model is based on [U-Net](https://en.wikipedia.org/wiki/U-Net) convolutional neural network that was enhanced using Residual blocks borrowed from [Residual Neural Network](https://en.wikipedia.org/wiki/Residual_neural_network) that help enhance the flow of the gradient during backpropagation step.
 ![example](/images/model-arch.JPG)
 ## Model training
 ![example](/images/learning-rate-finder.JPG)
