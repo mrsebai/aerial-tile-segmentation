@@ -8,7 +8,7 @@ Each tile is paired with a reference segmentation mask depicting the 6 classes w
 ![example](/images/isprs-example-tile-mask.JPG)
 
 ## Development Environment
-Tools and libraries
+Tools and libraries:
 - Python 3.5
 - Imageio 2.6
 - Deep Learning Libraries:
