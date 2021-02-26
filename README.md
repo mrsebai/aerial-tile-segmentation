@@ -45,7 +45,7 @@ Naturally, during training, we monitor the performance metrics: Accuracy, IoU, a
 The model performance measured on the validation dataset is quite amazing especially on the `Building`, `Road` and `Car` classes (IoU > 0.8). Below are the Confusion Matrix and the Per-class IoU metrics along with some reference visuals for the IoU metric.
 ![example](/images/validation-ds-metrics.JPG)
 ## Tile Prediction using Test-Time Augmentation
-Applying the inference pipeline to a new tile of the same size (6000x6000) could be slow if we loop through the tile to extract the patches, make  a batch prediction, and stitch them  together the patches to reconstruct the tile. Fortunately, can we perfrom such inference without any loop thanks to a clever tile reconstruction trick using Tensorflow's [tf.scatter_nd](https://www.tensorflow.org/api_docs/python/tf/scatter_nd). Inference time on tile is reduced from minutes to seconds. 
+Applying the inference pipeline to a new tile of the same size (6000x6000) could be slow if we loop through the tile to extract the patches, make  a batch prediction, and stitch them  together the patches to reconstruct the tile. Fortunately, can we perform such inference without any loop thanks to a clever tile reconstruction trick using Tensorflow's [tf.scatter_nd](https://www.tensorflow.org/api_docs/python/tf/scatter_nd). Inference time on tile is reduced from minutes to seconds. 
 
 In addition, once we performed an inference on a tile, [Test-time augmentation](https://arxiv.org/abs/2011.11156) technique enhances by several points the prediction quality as shown below:
 - Without test-time augmentation
