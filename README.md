@@ -1,4 +1,4 @@
-![Tensorflow](https://img.shields.io/badge/TensorFlow-2.0-orange) ![python](https://img.shields.io/badge/Python-3.5-green) ![python](https://img.shields.io/badge/Made%20with-Jupyter-blue)
+![Tensorflow](https://img.shields.io/badge/TensorFlow-2.0-orange) ![python](https://img.shields.io/badge/Python-3.5-green) ![jupyter](https://img.shields.io/badge/Made%20with-Jupyter-blue)
 
 
 # Semantic Segmentation of Satellite Images using Tensorflow 2.0
