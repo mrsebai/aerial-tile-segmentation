@@ -24,7 +24,7 @@ Infrastructure:
 
 
 
-## Tile extraction and data augmentation using tf.data input pipeline
+## Patch extraction and data augmentation using tf.data input pipeline
 Due to the size of the tiles (600x6000 pixels), it is not possible to feed them directly to the Tensorflow model which has an image input size limited to 256x256 pixels. Thus it is crucial to build an efficient and flexible input pipeline that reads the tile file, extracts smaller patches, performs data augmentation techniques while being fast enough to avoid data starvation of the model sitting on the GPU during the training phase. Fortunately, Tensorflow's [tf.data](https://www.tensorflow.org/guide/data) allows the building of such a pipeline. The tile and its corresponding reference mask are processed in parallel and the produced smaller patches are like shown in the following grid:
 ![example](/images/tile-patching.png)
 ## Tensorflow model architecture
